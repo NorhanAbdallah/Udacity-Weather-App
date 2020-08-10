@@ -1,0 +1,32 @@
+body{
+    /* text-align: center; */
+}
+
+.headline{
+    font-size: 52px;
+    color: red;
+    padding: 40px;
+    text-align: center;
+}
+
+.holder label{
+    font-weight: 700;
+    color: darkslateblue;
+}
+.feel textarea{
+    width: 400px;
+    height: 50px;
+    margin-top: 30px;
+
+}
+
+.entry{
+    color: red;
+    font-size: 25px;
+    margin-top: 48px;
+}
+
+#date , #temp, #content {
+    font-size: 20px;
+    color: black;
+}
