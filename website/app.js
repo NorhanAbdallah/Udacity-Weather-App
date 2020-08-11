@@ -1,6 +1,6 @@
 // Personal API Key for OpenWeatherMap API
 const url = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-const key = '&appid=06a7265ac5dad259c438c4ecf9817120';
+const key = '&appid=06a7265ac5dad259c438c4ecf9817120&units=metric ';
 // Event listener to add function to existing HTML DOM element
 
 document.getElementById('generate').addEventListener('click', generateTemp);
@@ -53,9 +53,10 @@ const updateUI = async(url='') => {
     const request = await fetch(url);
     try {
         const allData = await request.json();
-        document.getElementById("date").innerHTML = allData[0].date;
-        document.getElementById("temp").innerHTML = allData[0].temperature;
-        document.getElementById("content").innerHTML = allData[0].userResponse;
+        console.log("rrrrrrrrrr", allData)
+        document.getElementById("date").innerHTML = allData.date;
+        document.getElementById("temp").innerHTML = allData.temperature;
+        document.getElementById("content").innerHTML = allData.userResponse;
     }
     catch(error) {
         console.log("error", error)
